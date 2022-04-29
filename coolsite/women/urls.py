@@ -1,11 +1,11 @@
 from unicodedata import name
-from .views import about, addpage, contact, index, login, show_post, show_category
+from .views import WomenHome, about, addpage, contact,  login, show_post, show_category
 from django.contrib import admin
 from django.urls import path
 
 
 urlpatterns = [
-    path('', index, name='home'),
+    path('', WomenHome.as_view(), name='home'),
     path('about/', about, name='about'),
     path('addpage/', addpage, name='add_page'),
     path('contact/', contact, name='contact'),
